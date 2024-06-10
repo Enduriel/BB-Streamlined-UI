@@ -1,0 +1,4 @@
+CharacterScreenInventoryListModule.prototype.SUI_createItemSlots = SUI.Generic.createItemSlots(CharacterScreenInventoryListModule.prototype.createItemSlots);
+CharacterScreenInventoryListModule.prototype.SUI_destroyItemSlots = SUI.Generic.destroyItemSlots();
+CharacterScreenInventoryListModule.prototype.createDIV = SUI.Generic.createDIV(CharacterScreenInventoryListModule.prototype.createDIV);
+CharacterScreenInventoryListModule.prototype.assignItemToSlot = SUI.Generic.assignItemToSlot(CharacterScreenInventoryListModule.prototype.assignItemToSlot);
