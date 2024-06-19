@@ -15,7 +15,13 @@
 	}
 }, ::Hooks.QueueBucket.Early);
 
-::SUI.MH.queue(">mod_dynamic_perks", "<mod_EIMO", function() {
+::SUI.MH.queue(">mod_dynamic_perks", ">mod_msu", "<mod_EIMO", function() {
+	if (::Hooks.hasMod("mod_msu")) {
+		local mod = ::MSU.Class.Mod(::SUI.ID, ::SUI.Version, ::SUI.Name);
+		mod.Registry.addModSource(::MSU.System.Registry.ModSourceDomain.GitHub, "https://github.com/Enduriel/BB-Streamlined-UI");
+		mod.Registry.setUpdateSource(::MSU.System.Registry.ModSourceDomain.GitHub);
+		mod.Registry.addModSource(::MSU.System.Registry.ModSourceDomain.NexusMods, "https://www.nexusmods.com/battlebrothers/mods/730");
+	}
 	foreach (file in ::IO.enumerateFiles("ui/mods/mod_streamlined_ui/hooks/normal")) {
 		::Hooks.registerJS(file + ".js");
 	}
