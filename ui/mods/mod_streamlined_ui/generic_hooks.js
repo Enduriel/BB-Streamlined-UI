@@ -50,7 +50,7 @@ SUI.__deepEq = function(a, b) {
 				return false;
 			};
 			for (i = length; i-- !== 0;){
-				if (!equal(a[i], b[i])) {
+				if (!SUI.__deepEq(a[i], b[i])) {
 					return false;
 				}
 			}
