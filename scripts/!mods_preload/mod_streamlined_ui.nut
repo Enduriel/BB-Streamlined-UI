@@ -1,7 +1,7 @@
 ::SUI <- {
 	ID = "mod_streamlined_ui",
 	Name = "Streamlined UI",
-	Version = "1.0.1"
+	Version = "1.0.2"
 }
 ::SUI.MH <- ::Hooks.register(::SUI.ID, ::SUI.Version, ::SUI.Name);
 ::SUI.MH.require("mod_modern_hooks >= 0.5.0");
