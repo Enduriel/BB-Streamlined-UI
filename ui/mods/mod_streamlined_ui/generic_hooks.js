@@ -193,7 +193,7 @@ SUI.Generic.createItemSlots = function(_original) {
 				var index = entries.length + i;
 				var slot = $(slots.pop());
 				slot.attr('id', 'slot-index_' + index);
-				var itemData = {};
+				var itemData = slot.data('item') || {};
 				itemData.index = index;
 				itemData.owner = _owner;
 				slot.data('item', itemData);
